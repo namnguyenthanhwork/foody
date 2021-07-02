@@ -1,0 +1,126 @@
+/*========== MEDIA QUERIES ==========*/
+@media screen and (min-width: 576px) {
+
+    .home__container,
+    .about__container,
+    .app__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .about__data,
+    .about__initial,
+    .app__data,
+    .app__initial,
+    .contact__container,
+    .contact__initial {
+        text-align: initial;
+    }
+
+    .about__img,
+    .app__img {
+        width: 380px;
+        order: -1;
+    }
+
+    .contact__container {
+        grid-template-columns: 1.75fr 1fr;
+        align-items: center;
+    }
+
+    .contact__button {
+        justify-self: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --biggest-font-size: 64px;
+        --h1-font-size: 36px;
+        --h2-font-size: 24px;
+        --h3-font-size: 18px;
+        --normal-font-size: 16px;
+        --small-font-size: 15px;
+        --smaller-font-size: 13px;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .section {
+        padding-top: 128px;
+    }
+
+    .nav {
+        height: calc(var(--header-height) + 24px)
+    }
+
+    .nav__list {
+        display: flex;
+    }
+
+    .nav__item {
+        margin-left: var(--mb-5);
+        margin-bottom: 0;
+    }
+
+    .nav__toggle {
+        display: none;
+    }
+
+    .change-theme {
+        position: initial;
+        margin-left: var(--mb-2);
+    }
+
+    .home__container {
+        height: 100vh;
+        justify-items: center;
+    }
+
+    .services__container,
+    .menu__container {
+        margin-top: var(--mb-6);
+    }
+
+    .menu__container {
+        grid-template-columns: repeat(3, 210px);
+        column-gap: 64px;
+    }
+
+    .menu__content {
+        padding: 24px;
+    }
+
+    .menu__img {
+        width: 130px;
+    }
+
+    .app__store {
+        margin: 0 var(--mb-1) 0 0;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .bd-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home__img {
+        width: 500px;
+    }
+
+    .about__container,
+    .app__container {
+        column-gap: 112px;
+    }
+}
+
+/* For tall screens on mobiles y desktop*/
+@media screen and (min-height: 721px) {
+    .home__container {
+        height: 640px;
+    }
+}
