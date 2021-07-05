@@ -226,7 +226,7 @@ img {
 .scrolltop {
     position: fixed;
     right: 16px;
-    bottom: -20%;
+    bottom: 50px;
     z-index: var(--z-tooltip);
 
     display: flex;
@@ -236,6 +236,7 @@ img {
     padding: 5px;
     background: rgba(6, 156, 84, .5);
     visibility: hidden;
+    opacity: 0;
 
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -262,7 +263,8 @@ img {
 /* Show scrolltop */
 .show-scroll {
     visibility: visible;
-    bottom: 24px;
+    bottom: 90px;
+    opacity: 1;
 }
 
 /*========== HOME ==========*/
