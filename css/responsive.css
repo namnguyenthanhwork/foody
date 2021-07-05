@@ -1,39 +1,4 @@
-/*========== MEDIA QUERIES ==========*/
-@media screen and (min-width: 576px) {
-
-    .home__container,
-    .about__container,
-    .app__container {
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-    }
-
-    .about__data,
-    .about__initial,
-    .app__data,
-    .app__initial,
-    .contact__container,
-    .contact__initial {
-        text-align: initial;
-    }
-
-    .about__img,
-    .app__img {
-        width: 380px;
-        order: -1;
-    }
-
-    .contact__container {
-        grid-template-columns: 1.75fr 1fr;
-        align-items: center;
-    }
-
-    .contact__button {
-        justify-self: center;
-    }
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 960px) {
     :root {
         --biggest-font-size: 64px;
         --h1-font-size: 36px;
@@ -43,15 +8,23 @@
         --small-font-size: 15px;
         --smaller-font-size: 13px;
     }
+}
 
-    body {
-        margin: 0;
+@media screen and (max-width: 960px) {
+    .home .row {
+        text-align: center;
     }
 
-    .section {
-        padding-top: 128px;
+    .home__data {
+        order: 2;
     }
 
+    .footer {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
     .nav {
         height: calc(var(--header-height) + 24px)
     }
@@ -61,7 +34,7 @@
     }
 
     .nav__item {
-        margin-left: var(--mb-5);
+        margin-left: 40px;
         margin-bottom: 0;
     }
 
@@ -71,22 +44,7 @@
 
     .change-theme {
         position: initial;
-        margin-left: var(--mb-2);
-    }
-
-    .home__container {
-        height: 100vh;
-        justify-items: center;
-    }
-
-    .services__container,
-    .menu__container {
-        margin-top: var(--mb-6);
-    }
-
-    .menu__container {
-        grid-template-columns: repeat(3, 210px);
-        column-gap: 64px;
+        margin-left: 16px;
     }
 
     .menu__content {
@@ -98,29 +56,17 @@
     }
 
     .app__store {
-        margin: 0 var(--mb-1) 0 0;
+        margin: 0 8px 0 0;
     }
 }
 
-@media screen and (min-width: 960px) {
-    .bd-container {
-        margin-left: auto;
-        margin-right: auto;
+@media screen and (max-width: 575px) {
+    .nav {
+        padding: 10px 15px;
     }
 
-    .home__img {
-        width: 500px;
-    }
-
-    .about__container,
-    .app__container {
-        column-gap: 112px;
-    }
-}
-
-/* For tall screens on mobiles y desktop*/
-@media screen and (min-height: 721px) {
-    .home__container {
-        height: 640px;
+    .about__img {
+        order: 2;
+        margin-top: 30px;
     }
 }
